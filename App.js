@@ -1,20 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import { StyleSheet } from "react-native";
+import HomeNavigation from "./src/navigation/HomeNav/HomeNavigation";
+import { NavigationContainer } from "@react-navigation/native";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"; 
 
-export default function App() {
+
+const queryClient = new QueryClient();
+
+export default function HomePage() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <QueryClientProvider client={queryClient}>
+      <NavigationContainer>
+        <HomeNavigation />
+      </NavigationContainer>
+    </QueryClientProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  logo: {
+    width: 100,
+    height: 100,
+    marginBottom: 20,
+  },
+  text: {
+    fontSize: 30,
+    fontWeight: "bold",
+    textAlign: "center",
+    fontStyle: "italic",
   },
 });
