@@ -2,12 +2,12 @@ import { TouchableOpacity, Text } from "react-native";
 import React, { useState } from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Home from "../../component/screens/Home";
-import Posts from "../../component/screens/Posts"; // Ensure correct import and capitalization
+import Posts from "../../component/screens/Posts"; 
 
 const Stack = createNativeStackNavigator();
 
 const HomeNavigation = () => {
-  const [modalVisible, setModalVisible] = useState(false); // State for modal visibility
+  const [modalVisible, setModalVisible] = useState(false);
 
   return (
     <Stack.Navigator
@@ -34,7 +34,7 @@ const HomeNavigation = () => {
                 backgroundColor: "#eee",
                 borderRadius: 5,
               }}
-              onPress={() => setModalVisible(!modalVisible)} // Toggle modal visibility
+              onPress={() => setModalVisible(!modalVisible)} 
             >
               <Text>Options</Text>
             </TouchableOpacity>
