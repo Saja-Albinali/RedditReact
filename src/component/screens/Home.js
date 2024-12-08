@@ -16,7 +16,7 @@ export default function Home() {
       <Text style={styles.text}>Reddit</Text>
       <TouchableOpacity
         style={styles.button}
-        onPress={() => navigation.navigate("Posts")} // Use the correct screen name
+        onPress={() => navigation.navigate("Posts")} 
       >
         <Text style={styles.buttonText}>View Posts</Text>
       </TouchableOpacity>
